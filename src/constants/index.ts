@@ -10,6 +10,6 @@ export const GENERAL_INFO: GeneralInfo = {
   name: "Juan Barrera",
   title: "Poetical justice to my soul",
   description:
-    "This is a digital space I created with the intention of sharing the things that bring me joy, and the projects I destine my time to. The more you know, the more you love.",
+    "This is a digital space I created with the intention of sharing the things that bring me joy, and the projects I devote my time to. The more you try, the more you know, the more you love.",
   location: "Currently at Sydney, Australia",
 };

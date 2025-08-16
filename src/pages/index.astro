@@ -1,5 +1,5 @@
 ---
-import { GENERAL_INFO } from '../constants';
+import { GENERAL_INFO, SOCIAL_LINKS} from '../constants';
 import '../styles/global.css';
 ---
 
@@ -13,7 +13,8 @@ import '../styles/global.css';
 		<meta name="description" content={GENERAL_INFO.description} />
 	</head>
 	<body>
-		<section class="min-h-screen relative">
+		<div class="custom-cursor"></div>
+		<section class="min-h-screen relative curtain-animate">
 			<div class='grid grid-cols-2'>
 				<div class="col-start-2 bg-[var(--accent)] p-1"></div>
 			</div>
@@ -22,13 +23,13 @@ import '../styles/global.css';
 				<div class="pb-4 px-4">
 					<p>Eng</p>
 				</div>
-				<div class="pb-4 px-4 border-l-1">
+				<div class="pb-4 px-4 border-l-1 nav-item">
 					<p>Blog</p>
 				</div>
-				<div class="pb-4 px-4 border-l-1">
+				<div class="pb-4 px-4 border-l-1 nav-item">
 					<p>Dev Portfolio</p>
 				</div>
-				<div class="pb-4 px-4	border-l-1">
+				<div class="pb-4 px-4 border-l-1 nav-item">
 					<p>Others</p>
 				</div>
 			</nav>
@@ -40,11 +41,10 @@ import '../styles/global.css';
 						<p class="text-2xl pb-8 px-4 border-x-1 pt-1">{GENERAL_INFO.description}</p>
 						<p class="text-2xl py-4 px-4 border-y-1 border-x-1 text-end">{GENERAL_INFO.location}</p>
 					</div>
-					<div class="text-2xl text-end pt-1 px-4 pb-4 border-b-1">
-						<p>Linkedin</p>
-						<p>Github</p>
-						<p>Strava</p>
-					</div>				
+					<div class="text-2xl text-end pt-1 px-4 pb-4 border-b-1 flex flex-col justify-end items-end">
+						{SOCIAL_LINKS.map(link => 
+						<a href={link.href} class="social-link">{link.name}</a>
+						)}
 				</div>
 			</main>
 			<div class='absolute bottom-0 left-0 grid grid-cols-[40%_1fr] grid-rows-[80%_1fr] w-full'>
@@ -80,5 +80,7 @@ import '../styles/global.css';
 				<div class="bg-[var(--accent)] p-1"></div>
 			</div>
 		</section>
+		
+		<script src="../scripts/cursor.js"></script>
 	</body>
 </html>
