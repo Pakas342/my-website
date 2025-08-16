@@ -1,5 +1,6 @@
 ---
-
+import { GENERAL_INFO } from '../constants';
+import '../styles/global.css';
 ---
 
 <html lang="en">
@@ -8,9 +9,76 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{GENERAL_INFO.name} - {GENERAL_INFO.title}</title>
+		<meta name="description" content={GENERAL_INFO.description} />
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<section class="min-h-screen relative">
+			<div class='grid grid-cols-2'>
+				<div class="col-start-2 bg-[var(--accent)] p-1"></div>
+			</div>
+			<main class="px-10 pt-10">
+			<nav class="grid grid-cols-[50%_1fr_1fr_1fr] border-b-1 border-x-1 border-var(--primary) text-2xl">
+				<div class="pb-4 px-4">
+					<p>Eng</p>
+				</div>
+				<div class="pb-4 px-4 border-l-1">
+					<p>Blog</p>
+				</div>
+				<div class="pb-4 px-4 border-l-1">
+					<p>Dev Portfolio</p>
+				</div>
+				<div class="pb-4 px-4	border-l-1">
+					<p>Others</p>
+				</div>
+			</nav>
+			<header class="pt-3 pb-2 grid grid-cols-[50%_1fr]">
+				<h1 class="text-6xl col-start-2">{GENERAL_INFO.title}</h1>
+			</header>
+				<div class="grid grid-cols-[50%_1fr_0.3fr] border-r-1 border-t-1 border-var(--primary)">
+					<div class="col-start-2 grid grid-rows-[1fr_0.2fr]">
+						<p class="text-2xl pb-8 px-4 border-x-1 pt-1">{GENERAL_INFO.description}</p>
+						<p class="text-2xl py-4 px-4 border-y-1 border-x-1 text-end">{GENERAL_INFO.location}</p>
+					</div>
+					<div class="text-2xl text-end pt-1 px-4 pb-4 border-b-1">
+						<p>Linkedin</p>
+						<p>Github</p>
+						<p>Strava</p>
+					</div>				
+				</div>
+			</main>
+			<div class='absolute bottom-0 left-0 grid grid-cols-[40%_1fr] grid-rows-[80%_1fr] w-full'>
+				<h2 class="text-8xl text-center">Juan Barrera</h2>
+				<div class="border-b-1 grid grid-rows-[0.7fr_1fr]">
+					<div class ='border-l-1 row-start-2 flex'>
+						<div>
+							<p class="px-4 ">Software Engineer</p>
+							<p class="px-4">Fullstack Web Developer</p>
+						</div>
+						<div>
+							<p class="px-4">NextJs</p>
+							<p class="px-4">RemixJs</p>
+						</div>
+						<div>
+							<p class="px-4">FastAPI</p>
+							<p class="px-4">Flask</p>
+						</div>
+						<div>
+							<p class="px-4">Tailwind</p>
+							<p class="px-4">React</p>
+						</div>
+						<div>
+							<p class="px-4">Docker</p>
+							<p class="px-4">Vercel</p>
+						</div>
+						<div>
+							<p class="px-4">PostgreSql</p>
+							<p class="px-4">Supabase</p>
+						</div>
+					</div>
+				</div>
+				<div class="bg-[var(--accent)] p-1"></div>
+			</div>
+		</section>
 	</body>
 </html>
