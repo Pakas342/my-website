@@ -2,6 +2,6 @@
 
 I'm a terrible designer, so I based this on several references I found online. Thanks for your inspiration!
 
-(https://zunedaalim.com)
-(https://azumbrunnen.me)
-(https://www.igorsokoltsov.com)
+https://zunedaalim.com</br>
+https://azumbrunnen.me</br>
+https://www.igorsokoltsov.com
